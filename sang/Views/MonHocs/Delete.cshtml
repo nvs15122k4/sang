@@ -1,0 +1,48 @@
+﻿@model sang.Models.MonHoc
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn muốn xóa chứ?</h3>
+<div>
+    <h4>Môn học</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenMonHoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenMonHoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoTietLyThuyet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTietLyThuyet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoTietThucHanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTietThucHanh)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>

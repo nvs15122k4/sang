@@ -1,0 +1,32 @@
+﻿@model sang.Models.NgoaiNgu
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn muốn xóa chứ? <h3>
+<div>
+    <h4>Ngoại ngữ</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNgoaiNgu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNgoaiNgu)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>

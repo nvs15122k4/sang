@@ -1,0 +1,45 @@
+﻿@model IEnumerable<sang.Models.MonHoc>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Môn học</h2>
+
+<p>
+    @Html.ActionLink("Thêm môn học mới", "Create")
+    <a href="@Url.Action("Index", "AddHome")">Quay lại menu Quản lý </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMonHoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoTietLyThuyet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoTietThucHanh)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenMonHoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoTietLyThuyet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoTietThucHanh)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.MaMonHoc }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MaMonHoc })
+        </td>
+    </tr>
+}
+
+</table>

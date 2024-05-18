@@ -1,0 +1,45 @@
+﻿@model IEnumerable<sang.Models.GiaoVien>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Giáo viên</h2>
+
+<p>
+    @Html.ActionLink("Thêm giáo viên mới", "Create")
+    <a href="@Url.Action("Index", "AddHome")">Quay lại menu Quản lý </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenGiaoVien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoDienThoai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenGiaoVien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoDienThoai)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.MaGiaoVien }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MaGiaoVien })
+        </td>
+    </tr>
+}
+
+</table>

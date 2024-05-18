@@ -1,0 +1,56 @@
+﻿@model sang.Models.Lop
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn muốn xóa chứ?</h3>
+<div>
+    <h4>Lop</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenLop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiSo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiSo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khoi.TenKhoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khoi.TenKhoi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgoaiNgu.TenNgoaiNgu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgoaiNgu.TenNgoaiNgu)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>

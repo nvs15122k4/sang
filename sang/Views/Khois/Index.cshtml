@@ -1,0 +1,33 @@
+﻿@model IEnumerable<sang.Models.Khoi>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Khối</h2>
+
+<p>
+    @Html.ActionLink("Tạo khối mới", "Create")
+    <a href="@Url.Action("Index", "AddHome")">Quay lại menu Quản lý </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenKhoi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenKhoi)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.MaKhoi }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MaKhoi })
+        </td>
+    </tr>
+}
+
+</table>

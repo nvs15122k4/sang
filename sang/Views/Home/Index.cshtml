@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<head>
+    <title>Trường học</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <ul>
+                <li class="current"><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                <li><a href="@Url.Action("About", "Home")">Thông tin</a></li>
+                <li><a href="@Url.Action("Contact", "Home")">Liên hệ</a></li>
+                <li><a href="@Url.Action("Index", "xemThoiKhoaBieux")">Liên hệ</a></li>
+            </ul>
+            <div id="tagline">
+                <div>
+                    <h4>Hoàng Văn Thụ</h4>
+                    <p>Trường học cấp 3</p>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="home">
+                <div>
+                    <div id="aside">
+                        <div>
+                            <h1>Chào mừng đến với <span class="last">website của trường THPT Hoàng Văn Thụ</span></h1>
+                            <a href="#"><img src="~/images/123456.jpg" alt="" /></a>
+                            <p>Đây là trang web về quản lý thời khóa biểu</p>
+                            <p>Trong này có những thông tin liên quan tới thời khóa biểu để giúp các bạn cập nhật.</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <h2><a href="#">Xin chào <span class="last">các bạn</span></a></h2>
+                                <p>Đây là một vài dòng giới thiệu về trang thông tin thời khóa biểu để giúp bạn học tập.</p>
+                                <p>Hãy chia sẽ nó đến với bạn bè cùng lớp để mọi người cùng tham gia nhé!</p>
+                            </li>
+                            <li>
+                                <h2><a href="#">Sinh viên <span class="last">Sang</span></a></h2>
+                                <p>Trang web này thuộc về bạn Sang.</p>
+                                <p>Nếu bạn muốn xin soucre của trang này hãy vào phần liên hệ phía bên trên để được giúp đỡ.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="calendar">
+                        <h3>Tin tức</h3>
+                        <ul>
+                            <li>
+                                <div>
+                                    <span>
+                                        13<br />
+                                        T5
+                                    </span>
+                                    <h2><a href="#">Nhặt được của rơi trả lại người mất.</a></h2>
+                                </div>
+                                <p>Nhóm bạn ở lớp 10A9 đã trả lại tiền cho người làm rơi được nhà trường thưởng nóng 5 quyển vở.</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>
+                                        12<br />
+                                        T5
+                                    </span>
+                                    <h2><a href="#">TOP 3 cả nước.</a></h2>
+                                </div>
+                                <p>Bạn Mai lớp 12A3 được giải 3 toàn nước về phần thi học sinh giỏi môn Toán.</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>
+                                        30<br />
+                                        T4 
+                                    </span>
+                                    <h2><a href="#">Lễ </a></h2>
+                                </div>
+                                <p>Toàn trường được nghỉ lễ.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div>
+                <div id="connect"> <a href="#"><img src="images/icon-facebook.gif" alt="" /></a> <a href="#"><img src="images/icon-twitter.gif" alt="" /></a> <a href="#"><img src="images/icon-youtube.gif" alt="" /></a> </div>
+                <div class="section">
+                    <ul>
+                        <li class="current"><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                        <li><a href="@Url.Action("About", "Home")">Thông tin</a></li>
+                        <li><a href="@Url.Action("Contact", "Home")">Liên hệ</a></li>
+                    </ul>
+                    <p>Copyright &copy; <a href="#">Sang.net</a> - All Rights Reserved | Template By <a target="_blank" href="#">Nguyễn Văn Sang</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
